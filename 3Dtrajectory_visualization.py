@@ -11,15 +11,15 @@ Created on Sun Oct 29 19:54:47 2023
 import numpy as np
 import matplotlib.pyplot as  plt
 import matplotlib as mpl
-# import cmasher as cmr      #extra perceptually uniform colormaps
+# import cmasher as cmr      #more perceptually uniform colormaps
 
 
 filename = 'outside_3.txt'   #SimFCS tracking .txt file
 raw_data = open(filename)
 data = np.loadtxt(raw_data, delimiter=None, skiprows=1, usecols = (0,1,2)) 
  
-pixel_size = 0.056       #pixel size (um)
-point_time = 0.032768    #point time (s)
+pixel_size = 0.056       #(um)
+point_time = 0.032768    #(s)
 
 x = (data[:,0]- data[0,0])*pixel_size
 y = (data[:,1]- data[0,1])*pixel_size
@@ -32,7 +32,7 @@ t = np.arange(0, N*point_time, point_time)
 
 
 fig, ax = plt.subplots(subplot_kw=dict(projection='3d'),figsize=(6,4))
-# ax.view_init(90,270)
+# ax.view_init(90,270)   #xy plane
 
 cm = plt.cm.get_cmap('viridis')
 # cm = cmr.bubblegum                   # CMasher cmap
