@@ -49,9 +49,9 @@ plt.title(filename)
 plt.xlabel('x (um)')
 plt.ylabel('y (um)')
 ax.set_zlabel('z (um)') 
-ax.w_xaxis.pane.fill = False
-ax.w_yaxis.pane.fill = False
-ax.w_zaxis.pane.fill = False
+ax.xaxis.pane.fill = False
+ax.yaxis.pane.fill = False
+ax.zaxis.pane.fill = False
 
 fig.tight_layout()
 
