@@ -35,7 +35,7 @@ fig, ax = plt.subplots(subplot_kw=dict(projection='3d'),figsize=(6,4))
 # ax.view_init(90,270)   #xy plane
 
 cm = plt.cm.get_cmap('viridis')
-# cm = cmr.bubblegum                   # CMasher cmap
+# cm = cmr.gem                   # CMasher cmap
 
 for i in range(len(t)-1):
     ax.plot(x[i:i+2], y[i:i+2], z[i:i+2], color=cm((i+1)/len(t)))
