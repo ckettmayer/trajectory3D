@@ -38,6 +38,7 @@ cm = plt.colormaps['viridis']
 for i in range(len(t)-1):
     ax.plot(x[i:i+2], y[i:i+2], z[i:i+2], color=cm((i+1)/len(t)))
 
+# Colorbar
 norm= mpl.colors.Normalize(vmin=min(t), vmax= max(t))
 sm = mpl.cm.ScalarMappable(cmap=cm, norm=norm)
 sm.set_array([])
